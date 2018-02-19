@@ -29,6 +29,7 @@ struct GetSmartConstant
     struct Storyboard {
         static let Main = "Main"
         static let Home = "Home"
+        static let Article = "Article"
     }
     
     struct Alert {

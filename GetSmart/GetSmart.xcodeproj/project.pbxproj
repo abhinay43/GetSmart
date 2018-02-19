@@ -40,6 +40,8 @@
 		386B5F532032A8D3005F2975 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F522032A8D3005F2975 /* ArticleCell.swift */; };
 		386B5F552032A9EB005F2975 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F542032A9EB005F2975 /* AboutVC.swift */; };
 		386B5F562032AC34005F2975 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B5F422032A69C005F2975 /* Home.storyboard */; };
+		38E30992203AEA77007F16BF /* QuesnserAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E30991203AEA77007F16BF /* QuesnserAnswerVC.swift */; };
+		38E30994203AEB17007F16BF /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E30993203AEB17007F16BF /* Article.storyboard */; };
 		528C09046BA7C901CDF60708 /* Pods_GetSmart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9A559C22D7A4303809D0B6 /* Pods_GetSmart.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		386B5F512032A8D2005F2975 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
 		386B5F522032A8D3005F2975 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		386B5F542032A9EB005F2975 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		38E30991203AEA77007F16BF /* QuesnserAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesnserAnswerVC.swift; sourceTree = "<group>"; };
+		38E30993203AEB17007F16BF /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
 		3DD18109B6252EF2A8C1D01B /* Pods-GetSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart.release.xcconfig"; sourceTree = "<group>"; };
 		4E9A559C22D7A4303809D0B6 /* Pods_GetSmart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetSmart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB21E529622351FFAF3CE092 /* Pods-GetSmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSmart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				381A7C932031A1E3005D1731 /* Main.storyboard */,
 				381A7C9B2031A1E3005D1731 /* LaunchScreen.storyboard */,
 				386B5F422032A69C005F2975 /* Home.storyboard */,
+				38E30993203AEB17007F16BF /* Article.storyboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 		381A7CA62031A205005D1731 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				38E30990203AE8BD007F16BF /* Articles */,
 				386B5F432032A743005F2975 /* Home */,
 				381A7CC22031A76F005D1731 /* Login */,
 			);
@@ -246,6 +252,14 @@
 			path = LeftMenu;
 			sourceTree = "<group>";
 		};
+		38E30990203AE8BD007F16BF /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				38E30991203AEA77007F16BF /* QuesnserAnswerVC.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
 		80DF87B6B37C8BD8AFD4BF15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +333,7 @@
 				381A7C9D2031A1E3005D1731 /* LaunchScreen.storyboard in Resources */,
 				381A7C9A2031A1E3005D1731 /* Assets.xcassets in Resources */,
 				381A7C952031A1E3005D1731 /* Main.storyboard in Resources */,
+				38E30994203AEB17007F16BF /* Article.storyboard in Resources */,
 				386B5F562032AC34005F2975 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E30992203AEA77007F16BF /* QuesnserAnswerVC.swift in Sources */,
 				381A7CDE2031AC4B005D1731 /* LoginNavVC.swift in Sources */,
 				381A7CC82031A83C005D1731 /* GeneralManager.swift in Sources */,
 				386B5F502032A8BE005F2975 /* MenuCell.swift in Sources */,
