@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		381A7C902031A1E3005D1731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7C8F2031A1E3005D1731 /* AppDelegate.swift */; };
+		381A7C952031A1E3005D1731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381A7C932031A1E3005D1731 /* Main.storyboard */; };
+		381A7C982031A1E3005D1731 /* GetSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 381A7C962031A1E3005D1731 /* GetSmart.xcdatamodeld */; };
+		381A7C9A2031A1E3005D1731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381A7C992031A1E3005D1731 /* Assets.xcassets */; };
+		381A7C9D2031A1E3005D1731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381A7C9B2031A1E3005D1731 /* LaunchScreen.storyboard */; };
+		381A7CAF2031A3F8005D1731 /* GetSmartConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CAE2031A3F8005D1731 /* GetSmartConstant.swift */; };
+		381A7CC82031A83C005D1731 /* GeneralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CB72031A452005D1731 /* GeneralManager.swift */; };
+		381A7CC92031A83C005D1731 /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CB52031A452005D1731 /* GlobalHelper.swift */; };
+		381A7CCA2031A83C005D1731 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CB12031A452005D1731 /* HTTPRequestManager.swift */; };
+		381A7CCB2031A83C005D1731 /* LeftMenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CBA2031A452005D1731 /* LeftMenuHelper.swift */; };
+		381A7CCC2031A83C005D1731 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CC02031A453005D1731 /* LocalNotificationHelper.swift */; };
+		381A7CCD2031A83C005D1731 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CB22031A452005D1731 /* LoginHelper.swift */; };
+		381A7CD02031A83C005D1731 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CBE2031A453005D1731 /* ReachabilityHelper.swift */; };
+		381A7CD12031A83C005D1731 /* RegistrationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CBC2031A452005D1731 /* RegistrationHelper.swift */; };
+		381A7CD72031A849005D1731 /* Date+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CAC2031A3CE005D1731 /* Date+Utility.swift */; };
+		381A7CD82031A849005D1731 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CAD2031A3CE005D1731 /* UIView+Utility.swift */; };
+		381A7CD92031A849005D1731 /* UIViewController+MBProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CAB2031A3CE005D1731 /* UIViewController+MBProgressHud.swift */; };
+		381A7CDA2031A92A005D1731 /* ApplicationAppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CB92031A452005D1731 /* ApplicationAppearanceManager.swift */; };
+		381A7CDD2031AA00005D1731 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CDB2031A9FE005D1731 /* UserHelper.swift */; };
+		381A7CDE2031AC4B005D1731 /* LoginNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CC32031A783005D1731 /* LoginNavVC.swift */; };
+		381A7CDF2031AC4E005D1731 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CC42031A783005D1731 /* LoginVC.swift */; };
+		381A7CE02031AC51005D1731 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7CC52031A783005D1731 /* RegistrationVC.swift */; };
+		386B5F402031FEB3005F2975 /* SpecialtiesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F3E2031FEB3005F2975 /* SpecialtiesHelper.swift */; };
+		386B5F412031FEB3005F2975 /* ProfessionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F3F2031FEB3005F2975 /* ProfessionsHelper.swift */; };
+		386B5F4A2032A7C3005F2975 /* SideMenuContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F442032A755005F2975 /* SideMenuContainerVC.swift */; };
+		386B5F4B2032A7C3005F2975 /* MainNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F452032A755005F2975 /* MainNavigationVC.swift */; };
+		386B5F4C2032A7C6005F2975 /* LeftMenuNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F472032A765005F2975 /* LeftMenuNavigationVC.swift */; };
+		386B5F4D2032A7C6005F2975 /* LeftMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F482032A765005F2975 /* LeftMenuVC.swift */; };
+		386B5F4E2032A7CD005F2975 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F492032A787005F2975 /* HomeVC.swift */; };
+		386B5F502032A8BE005F2975 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F4F2032A8BA005F2975 /* MenuCell.swift */; };
+		386B5F532032A8D3005F2975 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F522032A8D3005F2975 /* ArticleCell.swift */; };
+		386B5F552032A9EB005F2975 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F542032A9EB005F2975 /* AboutVC.swift */; };
+		386B5F562032AC34005F2975 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B5F422032A69C005F2975 /* Home.storyboard */; };
+		528C09046BA7C901CDF60708 /* Pods_GetSmart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9A559C22D7A4303809D0B6 /* Pods_GetSmart.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		381A7C8C2031A1E3005D1731 /* GetSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		381A7C8F2031A1E3005D1731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		381A7C942031A1E3005D1731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		381A7C972031A1E3005D1731 /* GetSmart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GetSmart.xcdatamodel; sourceTree = "<group>"; };
+		381A7C992031A1E3005D1731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		381A7C9C2031A1E3005D1731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		381A7C9E2031A1E3005D1731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381A7CAB2031A3CE005D1731 /* UIViewController+MBProgressHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MBProgressHud.swift"; sourceTree = "<group>"; };
+		381A7CAC2031A3CE005D1731 /* Date+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utility.swift"; sourceTree = "<group>"; };
+		381A7CAD2031A3CE005D1731 /* UIView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utility.swift"; sourceTree = "<group>"; };
+		381A7CAE2031A3F8005D1731 /* GetSmartConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSmartConstant.swift; sourceTree = "<group>"; };
+		381A7CB12031A452005D1731 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
+		381A7CB22031A452005D1731 /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
+		381A7CB52031A452005D1731 /* GlobalHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
+		381A7CB72031A452005D1731 /* GeneralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralManager.swift; sourceTree = "<group>"; };
+		381A7CB92031A452005D1731 /* ApplicationAppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAppearanceManager.swift; sourceTree = "<group>"; };
+		381A7CBA2031A452005D1731 /* LeftMenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuHelper.swift; sourceTree = "<group>"; };
+		381A7CBC2031A452005D1731 /* RegistrationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationHelper.swift; sourceTree = "<group>"; };
+		381A7CBE2031A453005D1731 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
+		381A7CC02031A453005D1731 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
+		381A7CC32031A783005D1731 /* LoginNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavVC.swift; sourceTree = "<group>"; };
+		381A7CC42031A783005D1731 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		381A7CC52031A783005D1731 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		381A7CDB2031A9FE005D1731 /* UserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
+		386B5F3E2031FEB3005F2975 /* SpecialtiesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialtiesHelper.swift; sourceTree = "<group>"; };
+		386B5F3F2031FEB3005F2975 /* ProfessionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionsHelper.swift; sourceTree = "<group>"; };
+		386B5F422032A69C005F2975 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		386B5F442032A755005F2975 /* SideMenuContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerVC.swift; sourceTree = "<group>"; };
+		386B5F452032A755005F2975 /* MainNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationVC.swift; sourceTree = "<group>"; };
+		386B5F472032A765005F2975 /* LeftMenuNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuNavigationVC.swift; sourceTree = "<group>"; };
+		386B5F482032A765005F2975 /* LeftMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuVC.swift; sourceTree = "<group>"; };
+		386B5F492032A787005F2975 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		386B5F4F2032A8BA005F2975 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		386B5F512032A8D2005F2975 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
+		386B5F522032A8D3005F2975 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		386B5F542032A9EB005F2975 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		3DD18109B6252EF2A8C1D01B /* Pods-GetSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart.release.xcconfig"; sourceTree = "<group>"; };
+		4E9A559C22D7A4303809D0B6 /* Pods_GetSmart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetSmart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB21E529622351FFAF3CE092 /* Pods-GetSmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSmart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		381A7C892031A1E3005D1731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528C09046BA7C901CDF60708 /* Pods_GetSmart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		114A690C931D36BB0172EDDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB21E529622351FFAF3CE092 /* Pods-GetSmart.debug.xcconfig */,
+				3DD18109B6252EF2A8C1D01B /* Pods-GetSmart.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		381A7C832031A1E3005D1731 = {
+			isa = PBXGroup;
+			children = (
+				381A7C8E2031A1E3005D1731 /* GetSmart */,
+				381A7C8D2031A1E3005D1731 /* Products */,
+				114A690C931D36BB0172EDDA /* Pods */,
+				80DF87B6B37C8BD8AFD4BF15 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		381A7C8D2031A1E3005D1731 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				381A7C8C2031A1E3005D1731 /* GetSmart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		381A7C8E2031A1E3005D1731 /* GetSmart */ = {
+			isa = PBXGroup;
+			children = (
+				381A7CA52031A1FD005D1731 /* Screens */,
+				381A7CAA2031A266005D1731 /* Cell */,
+				381A7CA92031A25C005D1731 /* Extension */,
+				381A7CA82031A251005D1731 /* Constant */,
+				381A7CA72031A24D005D1731 /* Helper */,
+				381A7C8F2031A1E3005D1731 /* AppDelegate.swift */,
+				381A7CA62031A205005D1731 /* ViewController */,
+				381A7CA42031A1F2005D1731 /* Resources */,
+			);
+			path = GetSmart;
+			sourceTree = "<group>";
+		};
+		381A7CA42031A1F2005D1731 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				381A7C992031A1E3005D1731 /* Assets.xcassets */,
+				381A7C9E2031A1E3005D1731 /* Info.plist */,
+				381A7C962031A1E3005D1731 /* GetSmart.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		381A7CA52031A1FD005D1731 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				381A7C932031A1E3005D1731 /* Main.storyboard */,
+				381A7C9B2031A1E3005D1731 /* LaunchScreen.storyboard */,
+				386B5F422032A69C005F2975 /* Home.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		381A7CA62031A205005D1731 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				386B5F432032A743005F2975 /* Home */,
+				381A7CC22031A76F005D1731 /* Login */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		381A7CA72031A24D005D1731 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				381A7CB92031A452005D1731 /* ApplicationAppearanceManager.swift */,
+				381A7CB72031A452005D1731 /* GeneralManager.swift */,
+				381A7CB52031A452005D1731 /* GlobalHelper.swift */,
+				381A7CB12031A452005D1731 /* HTTPRequestManager.swift */,
+				381A7CBA2031A452005D1731 /* LeftMenuHelper.swift */,
+				381A7CC02031A453005D1731 /* LocalNotificationHelper.swift */,
+				381A7CB22031A452005D1731 /* LoginHelper.swift */,
+				381A7CBE2031A453005D1731 /* ReachabilityHelper.swift */,
+				381A7CBC2031A452005D1731 /* RegistrationHelper.swift */,
+				381A7CDB2031A9FE005D1731 /* UserHelper.swift */,
+				386B5F3F2031FEB3005F2975 /* ProfessionsHelper.swift */,
+				386B5F3E2031FEB3005F2975 /* SpecialtiesHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		381A7CA82031A251005D1731 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				381A7CAE2031A3F8005D1731 /* GetSmartConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		381A7CA92031A25C005D1731 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				381A7CAC2031A3CE005D1731 /* Date+Utility.swift */,
+				381A7CAD2031A3CE005D1731 /* UIView+Utility.swift */,
+				381A7CAB2031A3CE005D1731 /* UIViewController+MBProgressHud.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		381A7CAA2031A266005D1731 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				386B5F4F2032A8BA005F2975 /* MenuCell.swift */,
+				386B5F522032A8D3005F2975 /* ArticleCell.swift */,
+				386B5F512032A8D2005F2975 /* ArticleCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		381A7CC22031A76F005D1731 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				381A7CC32031A783005D1731 /* LoginNavVC.swift */,
+				381A7CC42031A783005D1731 /* LoginVC.swift */,
+				381A7CC52031A783005D1731 /* RegistrationVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		386B5F432032A743005F2975 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				386B5F442032A755005F2975 /* SideMenuContainerVC.swift */,
+				386B5F452032A755005F2975 /* MainNavigationVC.swift */,
+				386B5F462032A759005F2975 /* LeftMenu */,
+				386B5F492032A787005F2975 /* HomeVC.swift */,
+				386B5F542032A9EB005F2975 /* AboutVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		386B5F462032A759005F2975 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				386B5F472032A765005F2975 /* LeftMenuNavigationVC.swift */,
+				386B5F482032A765005F2975 /* LeftMenuVC.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		80DF87B6B37C8BD8AFD4BF15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E9A559C22D7A4303809D0B6 /* Pods_GetSmart.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		381A7C8B2031A1E3005D1731 /* GetSmart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 381A7CA12031A1E3005D1731 /* Build configuration list for PBXNativeTarget "GetSmart" */;
+			buildPhases = (
+				167966B9A39A8592BEDDD16F /* [CP] Check Pods Manifest.lock */,
+				381A7C882031A1E3005D1731 /* Sources */,
+				381A7C892031A1E3005D1731 /* Frameworks */,
+				381A7C8A2031A1E3005D1731 /* Resources */,
+				D20B8A1202066DAF614233FE /* [CP] Embed Pods Frameworks */,
+				BE21769B60910DBA3CD8AD2A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetSmart;
+			productName = GetSmart;
+			productReference = 381A7C8C2031A1E3005D1731 /* GetSmart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		381A7C842031A1E3005D1731 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = ONS;
+				TargetAttributes = {
+					381A7C8B2031A1E3005D1731 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 381A7C872031A1E3005D1731 /* Build configuration list for PBXProject "GetSmart" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 381A7C832031A1E3005D1731;
+			productRefGroup = 381A7C8D2031A1E3005D1731 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				381A7C8B2031A1E3005D1731 /* GetSmart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		381A7C8A2031A1E3005D1731 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381A7C9D2031A1E3005D1731 /* LaunchScreen.storyboard in Resources */,
+				381A7C9A2031A1E3005D1731 /* Assets.xcassets in Resources */,
+				381A7C952031A1E3005D1731 /* Main.storyboard in Resources */,
+				386B5F562032AC34005F2975 /* Home.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		167966B9A39A8592BEDDD16F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetSmart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE21769B60910DBA3CD8AD2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D20B8A1202066DAF614233FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		381A7C882031A1E3005D1731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				381A7CDE2031AC4B005D1731 /* LoginNavVC.swift in Sources */,
+				381A7CC82031A83C005D1731 /* GeneralManager.swift in Sources */,
+				386B5F502032A8BE005F2975 /* MenuCell.swift in Sources */,
+				386B5F4A2032A7C3005F2975 /* SideMenuContainerVC.swift in Sources */,
+				386B5F532032A8D3005F2975 /* ArticleCell.swift in Sources */,
+				381A7CD92031A849005D1731 /* UIViewController+MBProgressHud.swift in Sources */,
+				381A7CDA2031A92A005D1731 /* ApplicationAppearanceManager.swift in Sources */,
+				381A7CE02031AC51005D1731 /* RegistrationVC.swift in Sources */,
+				381A7CD12031A83C005D1731 /* RegistrationHelper.swift in Sources */,
+				381A7CD02031A83C005D1731 /* ReachabilityHelper.swift in Sources */,
+				381A7CCB2031A83C005D1731 /* LeftMenuHelper.swift in Sources */,
+				381A7C902031A1E3005D1731 /* AppDelegate.swift in Sources */,
+				381A7CCD2031A83C005D1731 /* LoginHelper.swift in Sources */,
+				381A7CD72031A849005D1731 /* Date+Utility.swift in Sources */,
+				381A7CD82031A849005D1731 /* UIView+Utility.swift in Sources */,
+				386B5F552032A9EB005F2975 /* AboutVC.swift in Sources */,
+				386B5F402031FEB3005F2975 /* SpecialtiesHelper.swift in Sources */,
+				381A7CDD2031AA00005D1731 /* UserHelper.swift in Sources */,
+				381A7CCC2031A83C005D1731 /* LocalNotificationHelper.swift in Sources */,
+				386B5F4D2032A7C6005F2975 /* LeftMenuVC.swift in Sources */,
+				386B5F4E2032A7CD005F2975 /* HomeVC.swift in Sources */,
+				381A7C982031A1E3005D1731 /* GetSmart.xcdatamodeld in Sources */,
+				386B5F412031FEB3005F2975 /* ProfessionsHelper.swift in Sources */,
+				381A7CDF2031AC4E005D1731 /* LoginVC.swift in Sources */,
+				381A7CAF2031A3F8005D1731 /* GetSmartConstant.swift in Sources */,
+				386B5F4B2032A7C3005F2975 /* MainNavigationVC.swift in Sources */,
+				381A7CC92031A83C005D1731 /* GlobalHelper.swift in Sources */,
+				386B5F4C2032A7C6005F2975 /* LeftMenuNavigationVC.swift in Sources */,
+				381A7CCA2031A83C005D1731 /* HTTPRequestManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		381A7C932031A1E3005D1731 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				381A7C942031A1E3005D1731 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		381A7C9B2031A1E3005D1731 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				381A7C9C2031A1E3005D1731 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		381A7C9F2031A1E3005D1731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		381A7CA02031A1E3005D1731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		381A7CA22031A1E3005D1731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB21E529622351FFAF3CE092 /* Pods-GetSmart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EPHS5293FV;
+				INFOPLIST_FILE = "$(SRCROOT)/GetSmart/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ons.GetSmart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		381A7CA32031A1E3005D1731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DD18109B6252EF2A8C1D01B /* Pods-GetSmart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EPHS5293FV;
+				INFOPLIST_FILE = "$(SRCROOT)/GetSmart/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ons.GetSmart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		381A7C872031A1E3005D1731 /* Build configuration list for PBXProject "GetSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				381A7C9F2031A1E3005D1731 /* Debug */,
+				381A7CA02031A1E3005D1731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		381A7CA12031A1E3005D1731 /* Build configuration list for PBXNativeTarget "GetSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				381A7CA22031A1E3005D1731 /* Debug */,
+				381A7CA32031A1E3005D1731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		381A7C962031A1E3005D1731 /* GetSmart.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				381A7C972031A1E3005D1731 /* GetSmart.xcdatamodel */,
+			);
+			currentVersion = 381A7C972031A1E3005D1731 /* GetSmart.xcdatamodel */;
+			path = GetSmart.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 381A7C842031A1E3005D1731 /* Project object */;
+}
