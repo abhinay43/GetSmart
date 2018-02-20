@@ -52,10 +52,13 @@ struct GetSmartConstant
     }
     
     struct API {
-        static let Base            = "http://dkbmed.freeiz.com/"
+        static let Base            = "https://dkbsmart-raviweb.c9users.io/"
         static let BaseAPI         = Base + "api/"
         static let Login           = BaseAPI + "login?"
         static let Register        = BaseAPI + "register?"
+        static let ArticleList        = BaseAPI + "articlelist"
+        
+        
         static let Specialty       = BaseAPI + "specialties"
         static let Profession      = BaseAPI + "professions"
         //static let Articles        = BaseAPI + "articles"

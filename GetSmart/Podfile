@@ -16,5 +16,6 @@ pod 'Kingfisher'
 pod 'OneSignal'
 pod 'ReachabilitySwift'
 pod 'UICircularProgressRing'
+pod 'ActionSheetPicker'
 
 end

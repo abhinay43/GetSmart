@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380C28ED203C009300F908D5 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380C28EC203C009300F908D5 /* AnswerCell.xib */; };
+		380C28F0203C158800F908D5 /* ArticleCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C28EE203C158800F908D5 /* ArticleCategoryCell.swift */; };
+		380C28F1203C158800F908D5 /* ArticleCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380C28EF203C158800F908D5 /* ArticleCategoryCell.xib */; };
+		380C28F3203C1A6F00F908D5 /* ArticleListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C28F2203C1A6F00F908D5 /* ArticleListHelper.swift */; };
+		380C28F5203C1D3000F908D5 /* ArticleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C28F4203C1D3000F908D5 /* ArticleListVC.swift */; };
 		381A7C902031A1E3005D1731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7C8F2031A1E3005D1731 /* AppDelegate.swift */; };
 		381A7C952031A1E3005D1731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381A7C932031A1E3005D1731 /* Main.storyboard */; };
 		381A7C982031A1E3005D1731 /* GetSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 381A7C962031A1E3005D1731 /* GetSmart.xcdatamodeld */; };
@@ -42,10 +47,17 @@
 		386B5F562032AC34005F2975 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B5F422032A69C005F2975 /* Home.storyboard */; };
 		38E30992203AEA77007F16BF /* QuesnserAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E30991203AEA77007F16BF /* QuesnserAnswerVC.swift */; };
 		38E30994203AEB17007F16BF /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E30993203AEB17007F16BF /* Article.storyboard */; };
+		38E30998203AEFE0007F16BF /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E30996203AEFE0007F16BF /* AnswerCell.swift */; };
+		38E3099B203AF2DB007F16BF /* QuesnserAnswerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3099A203AF2DB007F16BF /* QuesnserAnswerHelper.swift */; };
 		528C09046BA7C901CDF60708 /* Pods_GetSmart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9A559C22D7A4303809D0B6 /* Pods_GetSmart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		380C28EC203C009300F908D5 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
+		380C28EE203C158800F908D5 /* ArticleCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCategoryCell.swift; sourceTree = "<group>"; };
+		380C28EF203C158800F908D5 /* ArticleCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCategoryCell.xib; sourceTree = "<group>"; };
+		380C28F2203C1A6F00F908D5 /* ArticleListHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListHelper.swift; sourceTree = "<group>"; };
+		380C28F4203C1D3000F908D5 /* ArticleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListVC.swift; sourceTree = "<group>"; };
 		381A7C8C2031A1E3005D1731 /* GetSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		381A7C8F2031A1E3005D1731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		381A7C942031A1E3005D1731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +96,8 @@
 		386B5F542032A9EB005F2975 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		38E30991203AEA77007F16BF /* QuesnserAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesnserAnswerVC.swift; sourceTree = "<group>"; };
 		38E30993203AEB17007F16BF /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
+		38E30996203AEFE0007F16BF /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		38E3099A203AF2DB007F16BF /* QuesnserAnswerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesnserAnswerHelper.swift; sourceTree = "<group>"; };
 		3DD18109B6252EF2A8C1D01B /* Pods-GetSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart.release.xcconfig"; sourceTree = "<group>"; };
 		4E9A559C22D7A4303809D0B6 /* Pods_GetSmart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetSmart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB21E529622351FFAF3CE092 /* Pods-GetSmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetSmart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +203,8 @@
 				381A7CDB2031A9FE005D1731 /* UserHelper.swift */,
 				386B5F3F2031FEB3005F2975 /* ProfessionsHelper.swift */,
 				386B5F3E2031FEB3005F2975 /* SpecialtiesHelper.swift */,
+				38E3099A203AF2DB007F16BF /* QuesnserAnswerHelper.swift */,
+				380C28F2203C1A6F00F908D5 /* ArticleListHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -214,6 +230,7 @@
 		381A7CAA2031A266005D1731 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				38E30995203AEFBF007F16BF /* Article */,
 				386B5F4F2032A8BA005F2975 /* MenuCell.swift */,
 				386B5F522032A8D3005F2975 /* ArticleCell.swift */,
 				386B5F512032A8D2005F2975 /* ArticleCell.xib */,
@@ -256,8 +273,20 @@
 			isa = PBXGroup;
 			children = (
 				38E30991203AEA77007F16BF /* QuesnserAnswerVC.swift */,
+				380C28F4203C1D3000F908D5 /* ArticleListVC.swift */,
 			);
 			path = Articles;
+			sourceTree = "<group>";
+		};
+		38E30995203AEFBF007F16BF /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				38E30996203AEFE0007F16BF /* AnswerCell.swift */,
+				380C28EC203C009300F908D5 /* AnswerCell.xib */,
+				380C28EE203C158800F908D5 /* ArticleCategoryCell.swift */,
+				380C28EF203C158800F908D5 /* ArticleCategoryCell.xib */,
+			);
+			path = Article;
 			sourceTree = "<group>";
 		};
 		80DF87B6B37C8BD8AFD4BF15 /* Frameworks */ = {
@@ -331,10 +360,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				381A7C9D2031A1E3005D1731 /* LaunchScreen.storyboard in Resources */,
+				380C28ED203C009300F908D5 /* AnswerCell.xib in Resources */,
 				381A7C9A2031A1E3005D1731 /* Assets.xcassets in Resources */,
 				381A7C952031A1E3005D1731 /* Main.storyboard in Resources */,
 				38E30994203AEB17007F16BF /* Article.storyboard in Resources */,
 				386B5F562032AC34005F2975 /* Home.storyboard in Resources */,
+				380C28F1203C158800F908D5 /* ArticleCategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +412,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GetSmart/Pods-GetSmart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker/ActionSheetPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -392,6 +424,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -425,10 +458,12 @@
 				381A7CD12031A83C005D1731 /* RegistrationHelper.swift in Sources */,
 				381A7CD02031A83C005D1731 /* ReachabilityHelper.swift in Sources */,
 				381A7CCB2031A83C005D1731 /* LeftMenuHelper.swift in Sources */,
+				380C28F5203C1D3000F908D5 /* ArticleListVC.swift in Sources */,
 				381A7C902031A1E3005D1731 /* AppDelegate.swift in Sources */,
 				381A7CCD2031A83C005D1731 /* LoginHelper.swift in Sources */,
 				381A7CD72031A849005D1731 /* Date+Utility.swift in Sources */,
 				381A7CD82031A849005D1731 /* UIView+Utility.swift in Sources */,
+				380C28F3203C1A6F00F908D5 /* ArticleListHelper.swift in Sources */,
 				386B5F552032A9EB005F2975 /* AboutVC.swift in Sources */,
 				386B5F402031FEB3005F2975 /* SpecialtiesHelper.swift in Sources */,
 				381A7CDD2031AA00005D1731 /* UserHelper.swift in Sources */,
@@ -437,11 +472,14 @@
 				386B5F4E2032A7CD005F2975 /* HomeVC.swift in Sources */,
 				381A7C982031A1E3005D1731 /* GetSmart.xcdatamodeld in Sources */,
 				386B5F412031FEB3005F2975 /* ProfessionsHelper.swift in Sources */,
+				38E30998203AEFE0007F16BF /* AnswerCell.swift in Sources */,
 				381A7CDF2031AC4E005D1731 /* LoginVC.swift in Sources */,
 				381A7CAF2031A3F8005D1731 /* GetSmartConstant.swift in Sources */,
+				38E3099B203AF2DB007F16BF /* QuesnserAnswerHelper.swift in Sources */,
 				386B5F4B2032A7C3005F2975 /* MainNavigationVC.swift in Sources */,
 				381A7CC92031A83C005D1731 /* GlobalHelper.swift in Sources */,
 				386B5F4C2032A7C6005F2975 /* LeftMenuNavigationVC.swift in Sources */,
+				380C28F0203C158800F908D5 /* ArticleCategoryCell.swift in Sources */,
 				381A7CCA2031A83C005D1731 /* HTTPRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

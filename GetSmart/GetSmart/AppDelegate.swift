@@ -27,9 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            initialViewController = SideMenuContainerVC.instantiate()
 //            LocalNotificationHelper.checkAuthoriation()
 //        }else{
-            initialViewController = LoginNavVC.instantiate()
+            //initialViewController = LoginNavVC.instantiate()
 //        }
-//        
+//
+        initialViewController = ArticleListVC.instantiate()
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
 //
