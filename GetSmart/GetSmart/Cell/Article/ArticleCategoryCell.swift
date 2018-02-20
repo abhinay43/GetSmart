@@ -13,20 +13,25 @@ class ArticleCategoryCell: UITableViewCell
     //MARK:- IBOutlet
     @IBOutlet fileprivate weak var viewIndex: UIView!
     @IBOutlet fileprivate weak var lblIndex: UILabel!
-    @IBOutlet fileprivate weak var txtTitle: UITextView!
+    @IBOutlet fileprivate weak var txtTitle: UILabel!
     
     //MARK:- View Life Cycle
-    override func awakeFromNib() {
+    
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
-        // Initialization code
+        self.viewIndex.drawBorder(cornerRadius: 75.0/2, borderWidth: 2.0, borderColor: WhiteColor, maskToBound: true)
     }
 
     //MARK:- Public Var
     var data:ArticleListRecord!{
         didSet{
             self.txtTitle.text = data.title
+            self.lblIndex.text = "\(self.tag)"
+            self.backgroundColor = UIColor.random()
         }
     }
+    
     
 }
 

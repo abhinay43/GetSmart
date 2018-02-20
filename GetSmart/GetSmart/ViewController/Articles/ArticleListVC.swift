@@ -92,6 +92,7 @@ extension ArticleListVC:UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCategoryCell.Constant.Identifier) as! ArticleCategoryCell
+        cell.tag = indexPath.row + 1
         return cell
         
     }
@@ -109,4 +110,12 @@ extension ArticleListVC:UITableViewDelegate
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+}
+extension ArticleListVC:UIScrollViewDelegate
+{
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y <= 0{
+            tableView.contentOffset.y = 0
+        }
+    }
 }

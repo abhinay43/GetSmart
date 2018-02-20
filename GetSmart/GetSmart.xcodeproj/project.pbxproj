@@ -12,6 +12,7 @@
 		380C28F1203C158800F908D5 /* ArticleCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380C28EF203C158800F908D5 /* ArticleCategoryCell.xib */; };
 		380C28F3203C1A6F00F908D5 /* ArticleListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C28F2203C1A6F00F908D5 /* ArticleListHelper.swift */; };
 		380C28F5203C1D3000F908D5 /* ArticleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C28F4203C1D3000F908D5 /* ArticleListVC.swift */; };
+		380C28F7203C249B00F908D5 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380C28F6203C249B00F908D5 /* UIColor+Random.swift */; };
 		381A7C902031A1E3005D1731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A7C8F2031A1E3005D1731 /* AppDelegate.swift */; };
 		381A7C952031A1E3005D1731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381A7C932031A1E3005D1731 /* Main.storyboard */; };
 		381A7C982031A1E3005D1731 /* GetSmart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 381A7C962031A1E3005D1731 /* GetSmart.xcdatamodeld */; };
@@ -58,6 +59,7 @@
 		380C28EF203C158800F908D5 /* ArticleCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCategoryCell.xib; sourceTree = "<group>"; };
 		380C28F2203C1A6F00F908D5 /* ArticleListHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListHelper.swift; sourceTree = "<group>"; };
 		380C28F4203C1D3000F908D5 /* ArticleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListVC.swift; sourceTree = "<group>"; };
+		380C28F6203C249B00F908D5 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		381A7C8C2031A1E3005D1731 /* GetSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		381A7C8F2031A1E3005D1731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		381A7C942031A1E3005D1731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				381A7CAC2031A3CE005D1731 /* Date+Utility.swift */,
 				381A7CAD2031A3CE005D1731 /* UIView+Utility.swift */,
 				381A7CAB2031A3CE005D1731 /* UIViewController+MBProgressHud.swift */,
+				380C28F6203C249B00F908D5 /* UIColor+Random.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				381A7CDE2031AC4B005D1731 /* LoginNavVC.swift in Sources */,
 				381A7CC82031A83C005D1731 /* GeneralManager.swift in Sources */,
 				386B5F502032A8BE005F2975 /* MenuCell.swift in Sources */,
+				380C28F7203C249B00F908D5 /* UIColor+Random.swift in Sources */,
 				386B5F4A2032A7C3005F2975 /* SideMenuContainerVC.swift in Sources */,
 				386B5F532032A8D3005F2975 /* ArticleCell.swift in Sources */,
 				381A7CD92031A849005D1731 /* UIViewController+MBProgressHud.swift in Sources */,
