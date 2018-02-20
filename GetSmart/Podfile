@@ -17,5 +17,6 @@ pod 'OneSignal'
 pod 'ReachabilitySwift'
 pod 'UICircularProgressRing'
 pod 'ActionSheetPicker'
+pod 'GTProgressBar'
 
 end

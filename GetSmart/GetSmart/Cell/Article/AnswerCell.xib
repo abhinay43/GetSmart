@@ -61,6 +61,13 @@
                             <constraint firstAttribute="width" constant="15" id="vtj-dE-H8n"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCn-GI-2Fv" userLabel="Seperator">
+                        <rect key="frame" x="0.0" y="104" width="375" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1yl-cs-lgh"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="lt9-vm-u2B" firstAttribute="top" secondItem="q9g-nP-1Pa" secondAttribute="bottom" constant="5" id="83K-ih-sLa"/>
@@ -69,10 +76,13 @@
                     <constraint firstAttribute="trailing" secondItem="lt9-vm-u2B" secondAttribute="trailing" constant="15" id="Rzm-KA-7T9"/>
                     <constraint firstItem="Kgg-8G-p8l" firstAttribute="height" secondItem="d61-EG-oGs" secondAttribute="height" id="VYT-Ed-hlC"/>
                     <constraint firstItem="lt9-vm-u2B" firstAttribute="leading" secondItem="6lf-qq-lcT" secondAttribute="leading" constant="15" id="aTW-71-r61"/>
+                    <constraint firstItem="zCn-GI-2Fv" firstAttribute="leading" secondItem="6lf-qq-lcT" secondAttribute="leading" id="chL-VX-RfU"/>
                     <constraint firstItem="q9g-nP-1Pa" firstAttribute="leading" secondItem="6lf-qq-lcT" secondAttribute="leading" constant="15" id="dup-Wd-Yj2"/>
                     <constraint firstItem="Kgg-8G-p8l" firstAttribute="leading" secondItem="6lf-qq-lcT" secondAttribute="leading" constant="15" id="fXq-9T-vG6"/>
                     <constraint firstAttribute="trailing" secondItem="d61-EG-oGs" secondAttribute="trailing" constant="15" id="hZB-vq-dqV"/>
                     <constraint firstItem="d61-EG-oGs" firstAttribute="top" secondItem="lt9-vm-u2B" secondAttribute="bottom" constant="5" id="ji4-G4-7uE"/>
+                    <constraint firstAttribute="bottom" secondItem="zCn-GI-2Fv" secondAttribute="bottom" id="n7O-ZW-BfP"/>
+                    <constraint firstAttribute="trailing" secondItem="zCn-GI-2Fv" secondAttribute="trailing" id="nIB-Ci-aPa"/>
                     <constraint firstAttribute="trailingMargin" secondItem="q9g-nP-1Pa" secondAttribute="trailing" constant="5" id="s1Y-gh-ehg"/>
                     <constraint firstItem="d61-EG-oGs" firstAttribute="leading" secondItem="6lf-qq-lcT" secondAttribute="leading" constant="35" id="tos-MO-eTb"/>
                     <constraint firstItem="Kgg-8G-p8l" firstAttribute="centerY" secondItem="d61-EG-oGs" secondAttribute="centerY" id="y3c-w1-mHr"/>
@@ -84,7 +94,7 @@
                 <outlet property="lblAnswerResult" destination="d61-EG-oGs" id="777-cM-RuA"/>
                 <outlet property="lblQuestion" destination="q9g-nP-1Pa" id="Nb3-24-no1"/>
             </connections>
-            <point key="canvasLocation" x="37" y="-36"/>
+            <point key="canvasLocation" x="36.5" y="-36.5"/>
         </tableViewCell>
     </objects>
     <resources>

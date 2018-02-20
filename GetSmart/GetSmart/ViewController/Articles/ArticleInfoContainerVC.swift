@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GTProgressBar
 
 class ArticleInfoContainerVC: UIViewController
 {
@@ -14,6 +15,9 @@ class ArticleInfoContainerVC: UIViewController
     @IBOutlet fileprivate weak var lblTitle: UILabel!
     @IBOutlet fileprivate weak var viewHeader: UIView!
     @IBOutlet fileprivate weak var heightLayoutConstraint: NSLayoutConstraint!
+    
+    @IBOutlet fileprivate weak var progressBar: GTProgressBar!
+    @IBOutlet fileprivate weak var btnRightArrow: UIButton!
     
     //MARK:- Private vars
     fileprivate var dataSource = ArticleListHelper.sharedInstance.dataSource
@@ -45,8 +49,12 @@ class ArticleInfoContainerVC: UIViewController
         heightLayoutConstraint.constant = height
     }
     
+    //MARK:- IBAction
+    @IBAction func didClickOnRightArrow(_ sender: Any) {
+    }
     
-
+    @IBAction func didClickOnLeftArrow(_ sender: Any) {
+    }
 }
 
 /* ---------------------------------- Extension --------------------------------------- */
