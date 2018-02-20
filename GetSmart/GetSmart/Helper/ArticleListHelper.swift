@@ -6,13 +6,14 @@
 //  Copyright © 2018 ONS. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct ArticleListRecord {
     let id:Int!
     let title:String!
     let created_at:String!
     let updated_at:String!
+    var color = Gray
     
     init(dict:[String:Any])
     {
@@ -20,6 +21,7 @@ struct ArticleListRecord {
         self.title = dict["title"] as! String
         self.created_at = dict["created_at"] as! String
         self.updated_at = dict["updated_at"] as! String
+        self.color = UIColor.random()
     }
 }
 

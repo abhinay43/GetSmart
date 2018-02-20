@@ -43,11 +43,84 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="c4b-zu-bGm" id="A3J-9I-Ip5"/>
+                        <segue destination="ubz-4X-oWE" kind="show" identifier="ArticleInfoContainerSegue" id="FHp-Dj-uTL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tic-5g-Rhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-705" y="6"/>
+        </scene>
+        <!--ArticleInfoContainerVC-->
+        <scene sceneID="E1R-ff-n11">
+            <objects>
+                <viewController storyboardIdentifier="ArticleInfoContainerVC" id="ubz-4X-oWE" userLabel="ArticleInfoContainerVC" customClass="ArticleInfoContainerVC" customModule="GetSmart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ULs-R2-QqM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afX-Sh-E3l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gears" translatesAutoresizingMaskIntoConstraints="NO" id="Fut-At-xk8">
+                                        <rect key="frame" x="15" y="15" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="9bH-vz-fN6"/>
+                                            <constraint firstAttribute="width" constant="60" id="HzO-UZ-Ubh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-t6-p13">
+                                        <rect key="frame" x="90" y="35" width="270" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.78801113367080688" green="0.87247377634048462" blue="0.2978520393371582" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="2oj-aV-8DC"/>
+                                    <constraint firstItem="bQx-t6-p13" firstAttribute="leading" secondItem="Fut-At-xk8" secondAttribute="trailing" constant="15" id="5RL-az-p0R"/>
+                                    <constraint firstItem="bQx-t6-p13" firstAttribute="top" secondItem="Fut-At-xk8" secondAttribute="top" constant="20" id="5iN-EC-COs"/>
+                                    <constraint firstItem="Fut-At-xk8" firstAttribute="leading" secondItem="afX-Sh-E3l" secondAttribute="leading" constant="15" id="TZV-IT-jVx"/>
+                                    <constraint firstAttribute="trailing" secondItem="bQx-t6-p13" secondAttribute="trailing" constant="15" id="wk7-Xk-P2k"/>
+                                    <constraint firstItem="Fut-At-xk8" firstAttribute="top" secondItem="afX-Sh-E3l" secondAttribute="top" constant="15" id="zYV-H1-4J8"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1G9-C0-onc">
+                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
+                                <connections>
+                                    <segue destination="Cxv-M6-IFz" kind="embed" id="12S-rC-suE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eGz-30-g8o" firstAttribute="trailing" secondItem="1G9-C0-onc" secondAttribute="trailing" id="404-Tf-Mjn"/>
+                            <constraint firstItem="1G9-C0-onc" firstAttribute="top" secondItem="afX-Sh-E3l" secondAttribute="bottom" id="8Ra-Rm-5zp"/>
+                            <constraint firstItem="eGz-30-g8o" firstAttribute="bottom" secondItem="1G9-C0-onc" secondAttribute="bottom" id="J1D-fy-IaX"/>
+                            <constraint firstItem="eGz-30-g8o" firstAttribute="trailing" secondItem="afX-Sh-E3l" secondAttribute="trailing" id="Jh5-8L-zAo"/>
+                            <constraint firstItem="afX-Sh-E3l" firstAttribute="leading" secondItem="eGz-30-g8o" secondAttribute="leading" id="L05-gb-62K"/>
+                            <constraint firstItem="1G9-C0-onc" firstAttribute="leading" secondItem="eGz-30-g8o" secondAttribute="leading" id="Yh4-5c-pJC"/>
+                            <constraint firstItem="afX-Sh-E3l" firstAttribute="top" secondItem="eGz-30-g8o" secondAttribute="top" constant="-20" id="bw3-Xu-yic"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eGz-30-g8o"/>
+                    </view>
+                    <connections>
+                        <outlet property="heightLayoutConstraint" destination="2oj-aV-8DC" id="nF3-3z-3Ik"/>
+                        <outlet property="lblTitle" destination="bQx-t6-p13" id="ncs-gf-3qj"/>
+                        <outlet property="viewHeader" destination="afX-Sh-E3l" id="E0y-2K-CHl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rzf-1u-bcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="6"/>
+        </scene>
+        <!--ArticleInfoPageVC-->
+        <scene sceneID="9Nb-FT-Qu7">
+            <objects>
+                <pageViewController storyboardIdentifier="ArticleInfoPageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Cxv-M6-IFz" userLabel="ArticleInfoPageVC" customClass="ArticleInfoPageVC" customModule="GetSmart" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIB-kG-F44" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="1"/>
         </scene>
         <!--QuesnserAnswerVC-->
         <scene sceneID="woJ-b9-ZOh">
@@ -77,10 +150,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAn-vR-QIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="30.134932533733135"/>
+            <point key="canvasLocation" x="1703" y="6"/>
         </scene>
     </scenes>
     <resources>
         <image name="contents-header" width="745" height="355"/>
+        <image name="gears" width="216" height="207"/>
     </resources>
 </document>

@@ -28,7 +28,7 @@ class ArticleCategoryCell: UITableViewCell
         didSet{
             self.txtTitle.text = data.title
             self.lblIndex.text = "\(self.tag)"
-            self.backgroundColor = UIColor.random()
+            self.backgroundColor = data.color
         }
     }
     

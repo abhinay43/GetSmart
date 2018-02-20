@@ -57,6 +57,14 @@ class ArticleListVC: UIViewController
         }
     }
     
+    //MARK:- Other
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == ArticleInfoContainerVC.Storyboard.SegueID{
+            
+        }
+    }
+    
     
 }
 
@@ -107,6 +115,7 @@ extension ArticleListVC:UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        self.performSegue(withIdentifier: ArticleInfoContainerVC.Storyboard.SegueID, sender: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
