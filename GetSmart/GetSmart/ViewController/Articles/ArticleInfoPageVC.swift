@@ -88,6 +88,7 @@ class ArticleInfoPageVC: UIPageViewController
         
         if let firstViewController = self.weekViewControllers.first {
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+            pageDelegate?.changePageSelection(index: 0)
         }
     }
     

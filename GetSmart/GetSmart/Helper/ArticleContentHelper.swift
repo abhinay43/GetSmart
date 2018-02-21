@@ -53,8 +53,8 @@ struct PageContent
     {
         self.id = dict["id"] as! Int
         self.article_id = dict["article_id"] as! Int
-        self.page_content = dict["page_title"] as! String
-        self.page_title = dict["page_content"] as! String
+        self.page_content = dict["page_content"] as! String
+        self.page_title = dict["page_title"] as! String
         self.footer_text = dict["footer_text"] as? String
         self.created_at = dict["created_at"] as! String
         self.updated_at = dict["updated_at"] as? String
@@ -134,7 +134,6 @@ extension ArticleContentHelper
             case .Success:
                 if let records = value as? [[String:Any]]
                 {
-                    self?.articleContents.removeAll()
                     for record in records
                     {
                         let articleContentRecord = ArticleContent(dict: record)

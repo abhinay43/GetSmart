@@ -89,7 +89,7 @@ extension ArticleInfoContainerVC:ArticleInfoPageVCDelegate
 {
     func changePageSelection(index:Int)
     {
-        dataSource = ArticleContentHelper.sharedInstance.dataSource
+        let dataSource = ArticleContentHelper.sharedInstance.dataSource
         let title = dataSource[index].pageContent.page_title
         lblTitle.text = title
     }
