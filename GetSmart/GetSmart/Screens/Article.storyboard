@@ -88,7 +88,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1G9-C0-onc">
                                 <rect key="frame" x="0.0" y="75" width="375" height="524"/>
                                 <connections>
-                                    <segue destination="Cxv-M6-IFz" kind="embed" id="12S-rC-suE"/>
+                                    <segue destination="Cxv-M6-IFz" kind="embed" identifier="ArticleInfoPageSegue" id="12S-rC-suE"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNS-lZ-KcB" customClass="GTProgressBar" customModule="GTProgressBar">

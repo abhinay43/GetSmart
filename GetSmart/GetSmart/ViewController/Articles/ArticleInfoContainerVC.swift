@@ -20,7 +20,7 @@ class ArticleInfoContainerVC: UIViewController
     @IBOutlet fileprivate weak var btnRightArrow: UIButton!
     
     //MARK:- Private vars
-    fileprivate var dataSource = ArticleListHelper.sharedInstance.dataSource
+    fileprivate var dataSource = ArticleContentHelper.sharedInstance.dataSource
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -41,7 +41,6 @@ class ArticleInfoContainerVC: UIViewController
     //MARK:- Private Apis
     fileprivate func initialSetting()
     {
-        
     }
     
     fileprivate func pageAppearance (){
@@ -49,11 +48,22 @@ class ArticleInfoContainerVC: UIViewController
         heightLayoutConstraint.constant = height
     }
     
+    
+    
     //MARK:- IBAction
     @IBAction func didClickOnRightArrow(_ sender: Any) {
     }
     
     @IBAction func didClickOnLeftArrow(_ sender: Any) {
+    }
+    
+    //MARK:- Other
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == ArticleInfoPageVC.Storyboard.SegueID{
+            let vc = segue.destination as! ArticleInfoPageVC
+            vc.pageDelegate = self
+        }
     }
 }
 
@@ -72,5 +82,15 @@ extension ArticleInfoContainerVC
     static func instantiate() -> ArticleInfoContainerVC{
         let storyboard = UIStoryboard(name: GetSmartConstant.Storyboard.Article, bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: Storyboard.ControllerID) as! ArticleInfoContainerVC
+    }
+}
+
+extension ArticleInfoContainerVC:ArticleInfoPageVCDelegate
+{
+    func changePageSelection(index:Int)
+    {
+        dataSource = ArticleContentHelper.sharedInstance.dataSource
+        let title = dataSource[index].pageContent.page_title
+        lblTitle.text = title
     }
 }

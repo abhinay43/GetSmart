@@ -15,8 +15,10 @@ class QuesnserAnswerVC: UIViewController
     @IBOutlet fileprivate weak var tableView: UITableView!
     
     //MARK:- Private vars
-    fileprivate var dataSource = QuesnserAnswerHelper.sharedInstance.dataSource
     fileprivate weak var pickerView = UIPickerView()
+    
+    //MARK:- Public vars
+    var dataSource = [DataRecord]()
 
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -67,19 +69,20 @@ extension QuesnserAnswerVC:UITableViewDataSource
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        let data = dataSource![indexPath.row]
-        if data.answerProvided == QuesnserAnswerHelper.Constant.defaultQuestionTitle{
+        let data = dataSource[indexPath.row]
+        
+        if data.answerProvided == ArticleContentHelper.Constant.defaultQuestionTitle{
             return AnswerCell.Constant.DefaultHeight
         }else{
             return AnswerCell.Constant.HeightWithAnswer
         }
-        
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: AnswerCell.Constant.Identifier) as! AnswerCell
@@ -95,7 +98,7 @@ extension QuesnserAnswerVC:UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
-        (cell as! AnswerCell).data = dataSource![indexPath.row]
+        (cell as! AnswerCell).data = dataSource[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
@@ -109,12 +112,17 @@ extension QuesnserAnswerVC:AnswerCellDelegate
 {
     func didClickOnSelection(tag: Int, btnSelection: UIButton)
     {
-        let records = self.dataSource![tag].answers
+        let records = self.dataSource[tag].childRecords
+        var labels = [String]()
         
-        ActionSheetStringPicker.show(withTitle: "Select option", rows: records, initialSelection: 0, doneBlock: {[weak self]
+        for record in records!{
+            labels.append(record.label)
+        }
+        
+        ActionSheetStringPicker.show(withTitle: "Select option", rows: labels, initialSelection: 0, doneBlock: {[weak self]
             picker, value, index in
             
-            self?.dataSource![tag].answerProvided = index as! String
+            self?.dataSource[tag].answerProvided = index as! String
             self?.tableView.reloadData()
             
             return

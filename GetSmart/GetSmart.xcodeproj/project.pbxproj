@@ -48,6 +48,8 @@
 		386B5F532032A8D3005F2975 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F522032A8D3005F2975 /* ArticleCell.swift */; };
 		386B5F552032A9EB005F2975 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B5F542032A9EB005F2975 /* AboutVC.swift */; };
 		386B5F562032AC34005F2975 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B5F422032A69C005F2975 /* Home.storyboard */; };
+		38DE8317203D67C40064738B /* ArticleContentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE8316203D67C40064738B /* ArticleContentHelper.swift */; };
+		38DE8319203DB3980064738B /* String + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE8318203DB3980064738B /* String + Utility.swift */; };
 		38E30992203AEA77007F16BF /* QuesnserAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E30991203AEA77007F16BF /* QuesnserAnswerVC.swift */; };
 		38E30994203AEB17007F16BF /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E30993203AEB17007F16BF /* Article.storyboard */; };
 		38E30998203AEFE0007F16BF /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E30996203AEFE0007F16BF /* AnswerCell.swift */; };
@@ -100,6 +102,8 @@
 		386B5F512032A8D2005F2975 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
 		386B5F522032A8D3005F2975 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		386B5F542032A9EB005F2975 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		38DE8316203D67C40064738B /* ArticleContentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentHelper.swift; sourceTree = "<group>"; };
+		38DE8318203DB3980064738B /* String + Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Utility.swift"; sourceTree = "<group>"; };
 		38E30991203AEA77007F16BF /* QuesnserAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesnserAnswerVC.swift; sourceTree = "<group>"; };
 		38E30993203AEB17007F16BF /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
 		38E30996203AEFE0007F16BF /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				386B5F3E2031FEB3005F2975 /* SpecialtiesHelper.swift */,
 				38E3099A203AF2DB007F16BF /* QuesnserAnswerHelper.swift */,
 				380C28F2203C1A6F00F908D5 /* ArticleListHelper.swift */,
+				38DE8316203D67C40064738B /* ArticleContentHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				381A7CAD2031A3CE005D1731 /* UIView+Utility.swift */,
 				381A7CAB2031A3CE005D1731 /* UIViewController+MBProgressHud.swift */,
 				380C28F6203C249B00F908D5 /* UIColor+Random.swift */,
+				38DE8318203DB3980064738B /* String + Utility.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				380C28F7203C249B00F908D5 /* UIColor+Random.swift in Sources */,
 				386B5F4A2032A7C3005F2975 /* SideMenuContainerVC.swift in Sources */,
 				380C28FB203C320600F908D5 /* ArticleInfoPageVC.swift in Sources */,
+				38DE8319203DB3980064738B /* String + Utility.swift in Sources */,
 				386B5F532032A8D3005F2975 /* ArticleCell.swift in Sources */,
 				381A7CD92031A849005D1731 /* UIViewController+MBProgressHud.swift in Sources */,
 				381A7CDA2031A92A005D1731 /* ApplicationAppearanceManager.swift in Sources */,
@@ -481,6 +488,7 @@
 				386B5F552032A9EB005F2975 /* AboutVC.swift in Sources */,
 				386B5F402031FEB3005F2975 /* SpecialtiesHelper.swift in Sources */,
 				381A7CDD2031AA00005D1731 /* UserHelper.swift in Sources */,
+				38DE8317203D67C40064738B /* ArticleContentHelper.swift in Sources */,
 				381A7CCC2031A83C005D1731 /* LocalNotificationHelper.swift in Sources */,
 				386B5F4D2032A7C6005F2975 /* LeftMenuVC.swift in Sources */,
 				386B5F4E2032A7CD005F2975 /* HomeVC.swift in Sources */,

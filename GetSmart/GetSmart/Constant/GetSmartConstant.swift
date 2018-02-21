@@ -56,7 +56,8 @@ struct GetSmartConstant
         static let BaseAPI         = Base + "api/"
         static let Login           = BaseAPI + "login?"
         static let Register        = BaseAPI + "register?"
-        static let ArticleList        = BaseAPI + "articlelist"
+        static let ArticleList     = BaseAPI + "articlelist"
+        static let ArticleContent  = BaseAPI + "pages?article_id=1"
         
         
         static let Specialty       = BaseAPI + "specialties"

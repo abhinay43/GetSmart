@@ -21,19 +21,19 @@ class AnswerCell: UITableViewCell
     @IBOutlet fileprivate weak var imgAnswerResult: UIImageView!
     
     //MARK:- Public Var
-    var data:QuesnserAnswerRecord!{
+    var data:DataRecord!{
         didSet{
-            self.lblQuestion.text = data.question
+            self.lblQuestion.text = data.label
             self.btnSelectOption.setTitle(data.answerProvided, for: .normal)
             
-            if data.answerProvided == QuesnserAnswerHelper.Constant.defaultQuestionTitle{
+            if data.answerProvided == ArticleContentHelper.Constant.defaultQuestionTitle{
                 self.lblAnswerResult.isHidden = true
                 self.imgAnswerResult.isHidden = true
             }else{
                 self.lblAnswerResult.isHidden = false
                 self.imgAnswerResult.isHidden = false
                 
-                if data.answerProvided != data.rightAnswer{
+                if data.answerProvided != data.right_answer{
                     imgAnswerResult.image = UIImage(named:"exclamation")
                     self.lblAnswerResult.text = "Incorrect"
                 }else{

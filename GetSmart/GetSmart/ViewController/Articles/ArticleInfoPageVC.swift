@@ -15,17 +15,21 @@ protocol ArticleInfoPageVCDelegate {
 class ArticleInfoPageVC: UIPageViewController
 {
     //MARK:- Private Vars
+    fileprivate var records = ArticleContentHelper.sharedInstance.dataSource
     
     
-    fileprivate lazy var weekViewControllers:[QuesnserAnswerVC] = { [unowned self] in
+    fileprivate lazy var weekViewControllers:[UIViewController] = { [unowned self] in
         
-        var viewControllers = [QuesnserAnswerVC]()
-        let vc = QuesnserAnswerVC.instantiate()
-        let vc1 = QuesnserAnswerVC.instantiate()
-        let vc2 = QuesnserAnswerVC.instantiate()
-        viewControllers.append(vc)
-        viewControllers.append(vc1)
-        viewControllers.append(vc2)
+        var viewControllers = [UIViewController]()
+        for record in self.records{
+            if let type = record.type{
+                if type == ArticleType.dropdown.rawValue{
+                    let vc = QuesnserAnswerVC.instantiate()
+                    vc.dataSource = record.data
+                    viewControllers.append(vc)
+                }
+            }
+        }
         return viewControllers
         }()
     
@@ -37,6 +41,8 @@ class ArticleInfoPageVC: UIPageViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetting()
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +58,31 @@ class ArticleInfoPageVC: UIPageViewController
     
     
     //MARK:- Private Methods
-    fileprivate func initialSetting(){
+    fileprivate func initialSetting()
+    {
+        if records.count == 0
+        {
+            self.loadDataSource()
+        }else{
+            self.loadPages()
+        }
+    }
+    
+    fileprivate func loadDataSource()
+    {
+        self.showLoadIndicator(title: "Wait..")
+        ArticleContentHelper.sharedInstance.getDataSourceFromServer(completionHandler: {[weak self] (status) in
+            
+            if status{
+                self?.records = ArticleContentHelper.sharedInstance.dataSource
+                self?.loadPages()
+            }
+            self?.hideLoadIndicator()
+        })
+    }
+    
+    fileprivate func loadPages()
+    {
         self.dataSource = self
         self.delegate = self
         
@@ -141,8 +171,7 @@ extension ArticleInfoPageVC:UIPageViewControllerDelegate
         if let firstViewController = viewControllers!.first,
             let index = weekViewControllers.index(of: firstViewController as! QuesnserAnswerVC)
         {
-            print(index)
-           // pageDelegate?.changePageSelection(index: index)
+            pageDelegate?.changePageSelection(index: index)
         }
     }
 }
