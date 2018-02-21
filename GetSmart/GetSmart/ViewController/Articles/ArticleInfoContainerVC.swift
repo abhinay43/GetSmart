@@ -21,12 +21,16 @@ class ArticleInfoContainerVC: UIViewController
     
     //MARK:- Private vars
     fileprivate var dataSource = ArticleContentHelper.sharedInstance.dataSource
+    var index = 0
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSetting()
+        self.pageAppearance()
     }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -46,15 +50,34 @@ class ArticleInfoContainerVC: UIViewController
     fileprivate func pageAppearance (){
         let height = ArticleInfoContainerVC.space + lblTitle.bounds.size.height
         heightLayoutConstraint.constant = height
+        
+        progressBar.barFillColor = GetSmartConstant.Color.LightGreenColor
     }
     
     
     
     //MARK:- IBAction
-    @IBAction func didClickOnRightArrow(_ sender: Any) {
+    @IBAction func didClickOnRightArrow(_ sender: Any)
+    {
+        let dataSource = ArticleContentHelper.sharedInstance.dataSource
+        if index == dataSource.count - 1{
+            return
+        }
+        index += 1
+        let notificationName = Notification.Name(NotificationName.HomePageSelectionChange)
+        NotificationCenter.default.post(name: notificationName, object: index)
+        self.changePageSelection(index: index)
     }
     
     @IBAction func didClickOnLeftArrow(_ sender: Any) {
+        if index == 0{
+            return
+        }
+        index -= 1
+        let notificationName = Notification.Name(NotificationName.HomePageSelectionChange)
+        NotificationCenter.default.post(name: notificationName, object: index)
+        
+        self.changePageSelection(index: index)
     }
     
     //MARK:- Other
@@ -77,6 +100,10 @@ extension ArticleInfoContainerVC
         static let SegueID = "ArticleInfoContainerSegue"
     }
     
+    struct NotificationName {
+        static let HomePageSelectionChange = "HomePageSelectionChange"
+    }
+    
     static let space:CGFloat = 75.0
     
     static func instantiate() -> ArticleInfoContainerVC{
@@ -89,8 +116,14 @@ extension ArticleInfoContainerVC:ArticleInfoPageVCDelegate
 {
     func changePageSelection(index:Int)
     {
+        self.index = index
+        
         let dataSource = ArticleContentHelper.sharedInstance.dataSource
+        let progress = CGFloat(index + 1) / CGFloat(dataSource.count)
+        progressBar.progress = progress
         let title = dataSource[index].pageContent.page_title
         lblTitle.text = title
     }
 }
+
+

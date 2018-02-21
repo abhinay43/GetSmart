@@ -49,6 +49,7 @@ struct PageContent
     let created_at:String!
     let updated_at:String?
     
+    
     init(dict:[String:Any])
     {
         self.id = dict["id"] as! Int
@@ -66,7 +67,7 @@ struct DataRecord
     let id:Int?
     let right_answer:String?
     let label:String!
-    let childRecords:[DataChild]!
+    var childRecords:[DataChild]!
     var answerProvided = ArticleContentHelper.Constant.defaultQuestionTitle
     
     init(dict:[String:Any])
@@ -92,8 +93,8 @@ struct DataChild
 {
     let id:Int!
     let label:String!
-    let right_answer:String?
-    
+    var right_answer:String?
+    var answerProvided = false
     
     init(dict:[String:Any])
     {

@@ -18,6 +18,7 @@ struct GetSmartConstant
         static let GrayColor = UIColor(red: 235.0/255.0, green: 235.0/255.0, blue: 241.0/255.0, alpha: 1.0)
         static let BlueColor = UIColor(red: 17.0/255.0, green: 33.0/255.0, blue: 61.0/255.0, alpha: 1.0)
         static let GreenColor = UIColor(red: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+        static let LightGreenColor = UIColor(red: 201.0/255.0, green: 222.0/255.0, blue: 76.0/255.0, alpha: 1.0)
         
     }
     

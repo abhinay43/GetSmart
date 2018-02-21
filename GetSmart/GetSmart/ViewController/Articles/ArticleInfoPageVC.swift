@@ -16,19 +16,39 @@ class ArticleInfoPageVC: UIPageViewController
 {
     //MARK:- Private Vars
     fileprivate var records = ArticleContentHelper.sharedInstance.dataSource
+    fileprivate var selectedIndex = 0
     
-    
-    fileprivate lazy var weekViewControllers:[UIViewController] = { [unowned self] in
+    fileprivate lazy var articleInfoViewControllers:[UIViewController] = { [unowned self] in
         
         var viewControllers = [UIViewController]()
-        for record in self.records{
+        for record in self.records
+        {
             if let type = record.type{
                 if type == ArticleType.dropdown.rawValue{
                     let vc = QuesnserAnswerVC.instantiate()
                     vc.dataSource = record.data
                     viewControllers.append(vc)
                 }
+                
+                else if type == ArticleType.radio.rawValue{
+                    let vc = RadioOptionVC.instantiate()
+                    vc.dataSource = record.data
+                    viewControllers.append(vc)
+                }
+                
+                else if type == ArticleType.textbox.rawValue{
+                    let vc = TextboxVC.instantiate()
+                    vc.dataSource = record.data
+                    viewControllers.append(vc)
+                }
+                
             }
+            else {
+                let vc = ContentVC.instantiate()
+                vc.dataSource = record.pageContent
+                viewControllers.append(vc)
+            }
+           
         }
         return viewControllers
         }()
@@ -41,13 +61,12 @@ class ArticleInfoPageVC: UIPageViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetting()
-        
-       
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-//        let notificationName = Notification.Name(WeekContainerVC.NotificationName.HomePageSelectionChange)
-//        NotificationCenter.default.addObserver(self, selector: #selector(WeekPageVC.openSelectedPage(_:)), name: notificationName, object: nil)
+    override func viewWillAppear(_ animated: Bool)
+    {
+        let notificationName = Notification.Name(ArticleInfoContainerVC.NotificationName.HomePageSelectionChange)
+        NotificationCenter.default.addObserver(self, selector: #selector(ArticleInfoPageVC.openSelectedPage(_:)), name: notificationName, object: nil)
         
     }
     
@@ -86,7 +105,8 @@ class ArticleInfoPageVC: UIPageViewController
         self.dataSource = self
         self.delegate = self
         
-        if let firstViewController = self.weekViewControllers.first {
+        if let firstViewController = self.articleInfoViewControllers.first
+        {
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
             pageDelegate?.changePageSelection(index: 0)
         }
@@ -95,17 +115,15 @@ class ArticleInfoPageVC: UIPageViewController
     @objc fileprivate func openSelectedPage(_ notification:NSNotification)
     {
         let selectedIndex = notification.object as! Int
-        let viewController = self.weekViewControllers[selectedIndex]
-        if selectedIndex == 0{
-            self.setViewControllers([viewController], direction: .reverse, animated: true, completion: nil)
-        }
-        if selectedIndex == 2{
+        let viewController = self.articleInfoViewControllers[selectedIndex]
+
+        if self.selectedIndex < selectedIndex{
             self.setViewControllers([viewController], direction: .forward, animated: true, completion: nil)
         }else{
-            self.setViewControllers([viewController], direction: .forward, animated: true, completion: nil)
+            self.setViewControllers([viewController], direction: .reverse, animated: true, completion: nil)
         }
-        
-        
+        self.selectedIndex = selectedIndex
+    
     }
     
 }
@@ -127,7 +145,7 @@ extension ArticleInfoPageVC:UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
     {
-        guard let viewControllerIndex = weekViewControllers.index(of: viewController as! QuesnserAnswerVC) else {
+        guard let viewControllerIndex = articleInfoViewControllers.index(of: viewController ) else {
             return nil
         }
         
@@ -137,21 +155,21 @@ extension ArticleInfoPageVC:UIPageViewControllerDataSource
             return nil
         }
         
-        guard weekViewControllers.count > previousIndex else {
+        guard articleInfoViewControllers.count > previousIndex else {
             return nil
         }
         
-        return weekViewControllers[previousIndex]
+        return articleInfoViewControllers[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
-        guard let viewControllerIndex = weekViewControllers.index(of: viewController as! QuesnserAnswerVC) else {
+        guard let viewControllerIndex = articleInfoViewControllers.index(of: viewController ) else {
             return nil
         }
         
         let nextIndex = viewControllerIndex + 1
-        let orderedViewControllersCount = weekViewControllers.count
+        let orderedViewControllersCount = articleInfoViewControllers.count
         
         guard orderedViewControllersCount != nextIndex else {
             return nil
@@ -161,7 +179,7 @@ extension ArticleInfoPageVC:UIPageViewControllerDataSource
             return nil
         }
         
-        return weekViewControllers[nextIndex]
+        return articleInfoViewControllers[nextIndex]
     }
 }
 
@@ -170,7 +188,7 @@ extension ArticleInfoPageVC:UIPageViewControllerDelegate
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool)
     {
         if let firstViewController = viewControllers!.first,
-            let index = weekViewControllers.index(of: firstViewController as! QuesnserAnswerVC)
+            let index = articleInfoViewControllers.index(of: firstViewController)
         {
             pageDelegate?.changePageSelection(index: index)
         }
