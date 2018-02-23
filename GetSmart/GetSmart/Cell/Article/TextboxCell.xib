@@ -24,16 +24,28 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuE-NS-fNC" userLabel="Seperator">
+                        <rect key="frame" x="0.0" y="65" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ljs-ts-WaB"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="N7A-Zs-75P"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="WuE-NS-fNC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2gf-QN-0bI"/>
+                    <constraint firstAttribute="trailing" secondItem="WuE-NS-fNC" secondAttribute="trailing" id="9vO-Yt-ovG"/>
                     <constraint firstItem="ISQ-x6-uso" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KWX-PX-VNY"/>
                     <constraint firstItem="ISQ-x6-uso" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="YoN-NZ-OES"/>
                     <constraint firstAttribute="bottom" secondItem="ISQ-x6-uso" secondAttribute="bottom" id="mMo-9t-hzh"/>
                     <constraint firstAttribute="trailing" secondItem="ISQ-x6-uso" secondAttribute="trailing" id="qRU-K9-6mj"/>
+                    <constraint firstAttribute="bottom" secondItem="WuE-NS-fNC" secondAttribute="bottom" id="r53-JB-xw1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="lblSeperator" destination="WuE-NS-fNC" id="oid-QI-jcx"/>
                 <outlet property="txtfield" destination="ISQ-x6-uso" id="WCk-lm-iGg"/>
             </connections>
             <point key="canvasLocation" x="34" y="60.5"/>

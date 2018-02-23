@@ -58,7 +58,7 @@
                   moduleName = "GetSmart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/abhi/Documents/iOS/Bhupesh/GetSmartApp/GetSmart/GetSmart/Helper/ProfessionsHelper.swift"
-                  timestampString = "540937179.943092"
+                  timestampString = "541074625.491495"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
@@ -73,7 +73,7 @@
                   moduleName = "GetSmart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/abhi/Documents/iOS/Bhupesh/GetSmartApp/GetSmart/GetSmart/Helper/ProfessionsHelper.swift"
-                  timestampString = "540937179.945435"
+                  timestampString = "541074625.493857"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
@@ -81,6 +81,38 @@
                   offsetFromSymbolStart = "51">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetSmart/ViewController/Articles/ArticleListNVC.swift"
+            timestampString = "540996255.162895"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "preferredStatusBarStyle"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GetSmart/ViewController/Articles/WebViewVC.swift"
+            timestampString = "541063546.601608"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "initialSetting()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

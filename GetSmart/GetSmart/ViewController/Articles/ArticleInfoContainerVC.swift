@@ -18,10 +18,18 @@ class ArticleInfoContainerVC: UIViewController
     
     @IBOutlet fileprivate weak var progressBar: GTProgressBar!
     @IBOutlet fileprivate weak var btnRightArrow: UIButton!
+    @IBOutlet fileprivate weak var btnLeftArrow: UIButton!
     
     //MARK:- Private vars
     fileprivate var dataSource = ArticleContentHelper.sharedInstance.dataSource
+    fileprivate var pageColor = GetSmartConstant.Color.LightGreenColor
+    //MARK:- Public vars
     var index = 0
+    var articleListIndex = 0{
+        didSet{
+           self.pageColor = ArticleListHelper.sharedInstance.dataSource[articleListIndex].color
+        }
+    }
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -45,13 +53,21 @@ class ArticleInfoContainerVC: UIViewController
     //MARK:- Private Apis
     fileprivate func initialSetting()
     {
+        progressBar.progress = 0
     }
     
-    fileprivate func pageAppearance (){
+    fileprivate func pageAppearance ()
+    {
         let height = ArticleInfoContainerVC.space + lblTitle.bounds.size.height
         heightLayoutConstraint.constant = height
         
-        progressBar.barFillColor = GetSmartConstant.Color.LightGreenColor
+        progressBar.barFillColor = pageColor
+        progressBar.labelTextColor = pageColor
+        btnRightArrow.tintColor = pageColor
+        viewHeader.backgroundColor = pageColor
+        
+        btnRightArrow.tintColor = pageColor
+        btnLeftArrow.tintColor = pageColor
     }
     
     
@@ -87,6 +103,10 @@ class ArticleInfoContainerVC: UIViewController
             let vc = segue.destination as! ArticleInfoPageVC
             vc.pageDelegate = self
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
 }
 

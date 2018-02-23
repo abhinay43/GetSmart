@@ -70,12 +70,6 @@ extension TextboxVC:UITableViewDataSource
         return 1
     }
     
-   
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let dataRecord = dataSource[section]
-        return dataRecord.label
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: TextboxCell.Constant.Identifier) as! TextboxCell
@@ -85,6 +79,28 @@ extension TextboxVC:UITableViewDataSource
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let title = dataSource[section].label!
+        let height = title.height(withConstrainedWidth: self.view.frame.size.width, font: UIFont.systemFont(ofSize: 15.0)) + ExtraSpaceInTableHeader
+        
+        let width = self.tableView.frame.size.width
+        let rect = CGRect(x: 0, y: 0, width: width, height: height)
+        let view = UIView(frame: rect)
+        view.backgroundColor = WaterGray
+        
+        let labelRect = CGRect(x: 15, y: 0, width: width - 20, height: height)
+        let label = UILabel(frame: labelRect)
+        label.font = UIFont.systemFont(ofSize: 15.0)
+        label.textColor = DarkGray
+        label.text = title
+        label.numberOfLines = 10
+        label.backgroundColor = ClearColor
+        label.textAlignment = .left
+        view.addSubview(label)
+        return view
+    }
 }
 extension TextboxVC:UITableViewDelegate
 {
@@ -93,6 +109,10 @@ extension TextboxVC:UITableViewDelegate
         return TextboxCell.Constant.DefaultHeight
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let label = dataSource[section].label!
+        return label.height(withConstrainedWidth: self.view.frame.size.width, font: UIFont.systemFont(ofSize: 15.0)) + ExtraSpaceInTableHeader
+    }
 }
 
 extension TextboxVC:TextboxCellDelegate

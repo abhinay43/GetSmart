@@ -10,7 +10,7 @@ import Foundation
 
 enum ArticleType:String
 {
-    case dropdown, radio, textbox
+    case dropdown, radio, textbox, html
 }
 
 struct ArticleContent

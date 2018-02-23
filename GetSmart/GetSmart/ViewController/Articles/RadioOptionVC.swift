@@ -70,15 +70,9 @@ extension RadioOptionVC:UITableViewDataSource
         return dataRecord.childRecords.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return RadioCell.Constant.DefaultHeight
-    }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let dataRecord = dataSource[section]
-        return dataRecord.label
-    }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -88,6 +82,28 @@ extension RadioOptionVC:UITableViewDataSource
         cell.section = indexPath.section
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let title = dataSource[section].label!
+        let height = title.height(withConstrainedWidth: self.view.frame.size.width, font: UIFont.systemFont(ofSize: 15.0)) + ExtraSpaceInTableHeader
+        
+        let width = self.tableView.frame.size.width
+        let rect = CGRect(x: 0, y: 0, width: width, height: height)
+        let view = UIView(frame: rect)
+        view.backgroundColor = WaterGray
+        
+        let labelRect = CGRect(x: 15, y: 0, width: width - 20, height: height)
+        let label = UILabel(frame: labelRect)
+        label.font = UIFont.systemFont(ofSize: 15.0)
+        label.textColor = DarkGray
+        label.text = title
+        label.numberOfLines = 10
+        label.backgroundColor = ClearColor
+        label.textAlignment = .left
+        view.addSubview(label)
+        return view
     }
 }
 
@@ -102,6 +118,22 @@ extension RadioOptionVC:UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        let record = dataSource[indexPath.section].childRecords[indexPath.row]
+        let height = record.label.height(withConstrainedWidth: self.view.frame.size.width, font: UIFont.boldSystemFont(ofSize: 14.0)) + 10.0
+        
+        let cellHeight = height < RadioCell.Constant.DefaultHeight ? RadioCell.Constant.DefaultHeight:height
+        
+        
+        return cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let label = dataSource[section].label!
+        return label.height(withConstrainedWidth: self.view.frame.size.width, font: UIFont.systemFont(ofSize: 15.0)) + ExtraSpaceInTableHeader
     }
     
 }

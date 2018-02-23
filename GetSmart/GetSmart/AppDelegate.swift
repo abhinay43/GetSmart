@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //initialViewController = LoginNavVC.instantiate()
 //        }
 //
-        initialViewController = ArticleListVC.instantiate()
+        initialViewController = LoginNavVC.instantiate()
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
 //

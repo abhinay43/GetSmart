@@ -11,8 +11,8 @@ import UIKit
 class LoginVC: UIViewController
 {
     //MARK:- IBOutlet
-    @IBOutlet fileprivate weak var txtEmail: UITextField!
-    @IBOutlet fileprivate weak var switchRemember: UISwitch!
+    @IBOutlet fileprivate weak var txtEmail: UITextField!    
+    @IBOutlet fileprivate weak var txtPassword: UITextField!
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -21,32 +21,7 @@ class LoginVC: UIViewController
         self.initialSetting()
     }
     
-    override func viewDidAppear(_ animated: Bool)
-    {
-        super.viewDidAppear(animated)
-        
-        if LocalNotificationHelper.showSixWeekReminderAlert()
-        {
-            self.showAlertWithOk(title: "Reminder!!", message: "Kindly enable the notification!!", completionHandler: { (status) in
-                
-                DispatchQueue.main.async {
-                    guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
-                        return
-                    }
-                    
-                    if UIApplication.shared.canOpenURL(settingsUrl) {
-                        if #available(iOS 10.0, *) {
-                            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
-                                LocalNotificationHelper.removeSixWeekReminder()
-                            })
-                        } else {
-                            // Fallback on earlier versions
-                        }
-                    }
-                }
-            })
-        }
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,18 +32,14 @@ class LoginVC: UIViewController
     fileprivate func pageAppearance(){
         self.view.backgroundColor = GetSmartConstant.Color.GrayColor
         navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
-        switchRemember.isOn = true
-        
-        
     }
     
     fileprivate func initialSetting()
     {
+        txtEmail.text = "speak2pearl@gmail.com"
+        txtPassword.text = "test123"
+        
         txtEmail.delegate = self
-        //Add image on Top Bar
-        let image  = UIImage(named: "navLogo")
-        let imageView = UIImageView(image: image)
-        self.navigationItem.titleView = imageView
     }
     
     fileprivate func checkEmailValidation() -> Bool
@@ -101,7 +72,7 @@ class LoginVC: UIViewController
         let vindow = UIApplication.shared.windows.first
         
         if let mainVindow = vindow {
-            UIView.transition(with: mainVindow, duration: 0.3, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
+            UIView.transition(with: mainVindow, duration: 0.0, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
                 mainVindow.rootViewController = controller
             }, completion: nil)
         }
@@ -110,11 +81,13 @@ class LoginVC: UIViewController
     //MARK:- IBAction
     @IBAction func didClickOnLogin(_ sender: UIButton)
     {
-        self.switchToStoryboard(name: GetSmartConstant.Storyboard.Home)
-        return;
         
         if txtEmail.text?.count == 0{
             self.showAlert(title: GetSmartConstant.Alert.Ooooops, message: "Provide the email id.")
+            return
+        }
+        if txtPassword.text?.count == 0{
+            self.showAlert(title: GetSmartConstant.Alert.Ooooops, message: "Provide the password .")
             return
         }
         
@@ -123,14 +96,14 @@ class LoginVC: UIViewController
         }
         
         self.showLoadIndicator(title: "Processing..")
+        
         if (txtEmail.text?.count)! > 0{
-            LoginHelper.loginWithMailID(mail: txtEmail.text!, completionHandler: {[weak self] (status, message) in
+            LoginHelper.loginWithMailID(mail: txtEmail.text!, password:txtPassword.text!, completionHandler: {[weak self] (status, message) in
                 self?.hideLoadIndicator()
                 if status{
                     UserHelper.rememberUserLogin(value: true)//Remember Login
                     //Add reminder notification after 2 weeks
-                    LocalNotificationHelper.scheduleNotificationForTwoWeekReminder()
-                    self?.switchToStoryboard(name: GetSmartConstant.Storyboard.Home)
+                    self?.switchToStoryboard(name: GetSmartConstant.Storyboard.Article)
                 }else{
                   self?.showAlert(title: GetSmartConstant.Alert.Error, message: message)
                 }

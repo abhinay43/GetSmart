@@ -10,7 +10,7 @@ import UIKit
 
 class ContentVC: UIViewController
 {
-
+    //MARK:- IBOutlet
     @IBOutlet fileprivate weak var txtView: UITextView!
     
     //MARK:- Public vars

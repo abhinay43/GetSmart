@@ -66,15 +66,15 @@ extension QuesnserAnswerVC
 extension QuesnserAnswerVC:UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return dataSource.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        let data = dataSource[indexPath.row]
+        let data = dataSource[indexPath.section]
         
         if data.answerProvided == ArticleContentHelper.Constant.defaultQuestionTitle{
             return AnswerCell.Constant.DefaultHeight
@@ -86,10 +86,32 @@ extension QuesnserAnswerVC:UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: AnswerCell.Constant.Identifier) as! AnswerCell
-        cell.tag = indexPath.row
+        cell.tag = indexPath.section
         cell.delegate = self
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let title = dataSource[section].label!
+        let height = title.height(withConstrainedWidth: self.view.frame.size.width, font: UIFont.systemFont(ofSize: 15.0)) + ExtraSpaceInTableHeader
+        
+        let width = self.tableView.frame.size.width
+        let rect = CGRect(x: 0, y: 0, width: width, height: height)
+        let view = UIView(frame: rect)
+        view.backgroundColor = WaterGray
+        
+        let labelRect = CGRect(x: 15, y: 0, width: width - 20, height: height)
+        let label = UILabel(frame: labelRect)
+        label.font = UIFont.systemFont(ofSize: 15.0)
+        label.textColor = DarkGray
+        label.text = title
+        label.numberOfLines = 10
+        label.backgroundColor = ClearColor
+        label.textAlignment = .left
+        view.addSubview(label)
+        return view
     }
 }
 
@@ -98,13 +120,20 @@ extension QuesnserAnswerVC:UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
-        (cell as! AnswerCell).data = dataSource[indexPath.row]
+        (cell as! AnswerCell).data = dataSource[indexPath.section]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let title = dataSource[section].label!
+        let height = title.height(withConstrainedWidth: self.view.frame.size.width, font: UIFont.systemFont(ofSize: 15.0)) + ExtraSpaceInTableHeader
+        return height
+    }
+    
     
 }
 

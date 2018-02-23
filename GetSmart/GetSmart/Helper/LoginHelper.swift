@@ -17,10 +17,13 @@ final class LoginHelper
 extension LoginHelper
 {
     //MARK:- API calling
-    static func loginWithMailID(mail:String, completionHandler:@escaping LoginCompletionHandler)
+    static func loginWithMailID(mail:String, password:String, completionHandler:@escaping LoginCompletionHandler)
     {
         let requestURL = GetSmartConstant.API.Login
-        let params = ["email":mail]
+       // https://dkbsmart-raviweb.c9users.io/api/login?email=speak2pearl@gmail.com&password=test123
+        
+        let params = ["email":mail,
+                      "password":password]
         
         HTTPRequestManager.httpRequest(url: requestURL, protocolMethod: .GET, parameters: params as [String : AnyObject], encoding: .URL) { (response, value, statusCode) in
             
@@ -29,26 +32,16 @@ extension LoginHelper
             case .Success:
                 if let responseValue = value as? [String:Any]
                 {
-                    let status = responseValue["status"] as! Int
-                    if let userId = responseValue["userId"] as? Int{
+                    let status = responseValue["status"] as! String
+                    let message = responseValue["message"] as! String
+                    
+                    if let userId = responseValue["user_id"] as? Int{
                         UserHelper.setUserId(user_Id: "\(userId)")
                     }
-                    var message:String!
-                    switch status
-                    {
-                    case 0:
-                        message = "This email was not found in our database. Please create an account."
-                        completionHandler(false, message)
-                    case 1:
-                        UserHelper.setUserEmail(user_email:"\(mail)")//Save User Email Id
-                        message = "User has logged in."
-                        completionHandler(true, message)
-                    case 2:
-                        message = "Email Address is Blank, Provide Proper Email Address."
-                        completionHandler(false, message)
-                    
-                    default:
-                        completionHandler(false, GetSmartConstant.Alert.SomethingWentWrong)
+                    if status == "Success"{
+                       completionHandler(true, message)
+                    }else{
+                       completionHandler(false, message)
                     }
                 }
                 break

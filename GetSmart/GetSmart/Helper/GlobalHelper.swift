@@ -15,3 +15,4 @@ let ClearColor = UIColor.clear
 let DarkGray   = UIColor.darkGray
 let Gray       = UIColor.gray
 let LightGray  = UIColor.lightGray
+let WaterGray  = UIColor(red: 247.0/255.0, green: 247.0/255.0, blue: 247.0/255.0, alpha: 1.0)

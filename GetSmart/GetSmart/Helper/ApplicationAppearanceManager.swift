@@ -10,7 +10,7 @@ import SlideMenuControllerSwift
 
 final class ApplicationAppearanceManager
 {
-    class func appLoadingAppearance()
+    static func appLoadingAppearance()
     {
         SlideMenuOptions.contentViewScale = 1.0
         SlideMenuOptions.contentViewOpacity = 0.25
@@ -24,6 +24,8 @@ final class ApplicationAppearanceManager
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17),NSAttributedStringKey.foregroundColor:DarkGray], for: .normal)
         
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: WhiteColor], for: .selected)
+        UITabBar.appearance().backgroundColor = BlackColor
+        UITabBar.appearance().tintColor = WhiteColor
     }
     
     

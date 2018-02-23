@@ -16,6 +16,8 @@ class TextboxCell: UITableViewCell
 {
     //MARK:-
     @IBOutlet fileprivate weak var txtfield: UITextField!
+    @IBOutlet fileprivate weak var lblSeperator: UIView!
+    
     
     //MARK:- Public Var
     var section = 0
@@ -28,6 +30,7 @@ class TextboxCell: UITableViewCell
     override func awakeFromNib(){
         super.awakeFromNib()
         txtfield.delegate = self
+        lblSeperator.backgroundColor = ArticleListHelper.sharedInstance.selectedColor
     }
     
     //MARK:- IBAction

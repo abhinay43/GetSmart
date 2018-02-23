@@ -15,15 +15,14 @@ protocol AnswerCellDelegate:class {
 class AnswerCell: UITableViewCell
 {
     //MARK:- IBOutlet
-    @IBOutlet fileprivate weak var lblQuestion: UILabel!
     @IBOutlet fileprivate weak var btnSelectOption: UIButton!
     @IBOutlet fileprivate weak var lblAnswerResult: UILabel!
     @IBOutlet fileprivate weak var imgAnswerResult: UIImageView!
+    @IBOutlet fileprivate weak var lblSeperator: UIView!
     
     //MARK:- Public Var
     var data:DataRecord!{
         didSet{
-            self.lblQuestion.text = data.label
             self.btnSelectOption.setTitle(data.answerProvided, for: .normal)
             
             if data.answerProvided == ArticleContentHelper.Constant.defaultQuestionTitle{
@@ -52,6 +51,7 @@ class AnswerCell: UITableViewCell
     override func awakeFromNib()
     {
         super.awakeFromNib()
+        self.lblSeperator.backgroundColor = ArticleListHelper.sharedInstance.selectedColor
     }
     
     //MARK:- IBAction
@@ -68,8 +68,8 @@ extension AnswerCell
 {
     struct Constant {
         static let Identifier = "AnswerCell"
-        static let DefaultHeight:CGFloat = 85.0
-        static let HeightWithAnswer:CGFloat = 105.0
+        static let DefaultHeight:CGFloat = 50.0
+        static let HeightWithAnswer:CGFloat = 70.0
     }
     
     static func registerNib(tableView:UITableView){

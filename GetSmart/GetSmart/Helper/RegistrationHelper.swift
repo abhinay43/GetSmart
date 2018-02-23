@@ -17,58 +17,33 @@ final class RegistrationHelper
 extension RegistrationHelper
 {
     //MARK:- API calling
-    static func registrationWithMailID(mail:String, firstName:String, lastName:String, professionID:String, specialitiesID:String, completionHandler:@escaping RegistrationCompletionHandler)
+    static func registrationWithMailID(mail:String, password:String, completionHandler:@escaping RegistrationCompletionHandler)
     {
         let requestURL = GetSmartConstant.API.Register
         let params = ["email":mail,
-                      "first_name":firstName,
-                      "last_name":lastName,
-                      "profession_id":professionID,
-                      "specialities_id":specialitiesID,]
-        
-        
+                      "password":password,
+                      ]
         HTTPRequestManager.httpRequest(url: requestURL, protocolMethod: .GET, parameters: params as [String : AnyObject], encoding: .URL) { (response, value, statusCode) in
             
             switch response
             {
             case .Success:
                 
-                if let responseValue = value as? [String:Int]
+                if let responseValue = value as? [String:Any]
                 {
-                    let status = responseValue["status"]!
-                    if let userId = responseValue["userId"]{
+                    let status = responseValue["status"] as! String
+                    let message = responseValue["message"] as! String
+                    
+                    if let userId = responseValue["user_id"] as? Int{
                         UserHelper.setUserId(user_Id: "\(userId)")
                     }
                     
-                    var message:String!
-                    switch status
-                    {
-                    case 1:
-                        message = "User has Successfully Registered."
-                        UserHelper.rememberUserLogin(value: true)//Remember Login
-                        UserHelper.setUserEmail(user_email:"\(mail)")//Save User Email Id
+                    if status == "Success"{
                         completionHandler(true, message)
-                    case 2:
-                        message = "Email is already in use. Try to log in or choose another email."
+                    }else{
                         completionHandler(false, message)
-                    case 3:
-                        message = "Email Address is Blank, Provide Valid Email Address."
-                        completionHandler(false, message)
-                    case 4:
-                        message = "First Name is Blank, Provide First Name."
-                        completionHandler(false, message)
-                    case 5:
-                        message = "Last Name is Blank, Provide Last Name."
-                        completionHandler(false, message)
-                    case 6:
-                        message = "Profession ID is Blank, Provide Profession ID."
-                        completionHandler(false, message)
-                    case 7:
-                        message = "Specialities ID is Blank, Provide Specialities ID."
-                        completionHandler(false, message)
-                    default:
-                        completionHandler(false, GetSmartConstant.Alert.SomethingWentWrong)
                     }
+                    
                 }
                 
                 break

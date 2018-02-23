@@ -39,6 +39,13 @@ class ArticleInfoPageVC: UIPageViewController
                 else if type == ArticleType.textbox.rawValue{
                     let vc = TextboxVC.instantiate()
                     vc.dataSource = record.data
+                    
+                    viewControllers.append(vc)
+                }
+                else if type == ArticleType.html.rawValue{
+                    let vc = WebVC.instantiate()
+                    vc.dataSource = record.pageContent
+                    
                     viewControllers.append(vc)
                 }
                 

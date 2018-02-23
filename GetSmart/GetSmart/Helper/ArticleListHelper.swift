@@ -38,6 +38,8 @@ final class ArticleListHelper
         }
     }
     
+    var selectedColor = WaterGray
+    
     //MARK:- Private Var
     fileprivate var ArticleListRecords = [ArticleListRecord]()
 }

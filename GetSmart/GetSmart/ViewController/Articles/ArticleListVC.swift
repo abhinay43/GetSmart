@@ -60,12 +60,17 @@ class ArticleListVC: UIViewController
     //MARK:- Other
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == ArticleInfoContainerVC.Storyboard.SegueID{
-            
+        if segue.identifier == ArticleInfoContainerVC.Storyboard.SegueID
+        {
+            let vc = segue.destination as! ArticleInfoContainerVC
+            vc.articleListIndex = sender as! Int
+            ArticleListHelper.sharedInstance.selectedColor = ArticleListHelper.sharedInstance.dataSource[sender as! Int].color
         }
     }
     
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
 }
 
 /* ---------------------------------- Extension --------------------------------------- */
